@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج تسجيل الباصات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header dir="rtl">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="logo.png" alt="شعار الموقع">
+        </div>
+
+        <h1>نموذج مصغر للنظام</h1>
+
+        <!-- Navigation Section -->
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">خدمة 1</a></li>
+                <li><a href="#services">خدمة 2</a></li>
+                <li><a href="#contact">خدمة 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Travel Registration Form Section -->
+    <section class="registration-form">
+        <h2>نموذج تسجيل الرحلات</h2>
+        <form id="travelForm" action="#" method="post">
+            <!-- Personal Information (Horizontal Layout) -->
+            <div class="form-row">
+                <!-- Name Input -->
+                <div class="form-group">
+                    <label for="name">العميل:</label>
+                    
+                     <select id="name" name="naem" required>
+                            <option value="" disabled selected>اختر العميل</option>
+                            <option value="مدينة 1">عميل 1</option>
+                            <option value="مدينة 2">عميل 2</option>
+                            <option value="مدينة 3">عميل 3</option>
+                            <option value="مدينة 4">عميل 4</option>
+                        </select>
+                    
+                </div>
+
+                <!-- Email Input -->
+                <div class="form-group">
+                    <label for="email">رقم التشغيلة: </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            
+            
+            <div class="form-row">
+                 <div class="form-group">
+            <label for="company">شركة الباص:</label>
+            <select id="company" name="company" required>
+                            <option value="" disabled selected>اختر الشركة</option>
+                            <option value="مدينة 1">شركة 1</option>
+                            <option value="مدينة 2">شركة 2</option>
+                            <option value="مدينة 3">شركة 3</option>
+                            <option value="مدينة 4">شركة 4</option>
+                        </select>
+                </div>
+                
+                <div class="form-group">
+                 <label for="run-type">نوع التشغيلة:</label>
+                    
+                    <select id="un-type" name="un-type" required>
+                            <option value="" disabled selected>اختر نوع التشغيلة</option>
+                            <option >تشغيلة كاملة </option>
+                            <option >مقطع من تشغيلة كاملة </option>
+                    </select>
+                    
+                      
+                </div>
+                
+                <div class="form-group">
+                 <label for="run-visa">نوع التأشيرة:</label>
+                      
+                    
+                     <select id="run-visa" name="run-visa" required>
+                            <option value="" disabled selected>اختر نوع التأشيرة</option>
+                            <option >عمرة </option>
+                            <option >سياحية </option>
+                    </select>
+                </div>
+                
+                
+                
+                
+            </div>
+<br> <br> <br> 
+            <hr>
+            <br> <br> <br>
+            <!-- Travel Paths (Horizontal Layout) -->
+            <div id="travelPaths">
+                <div class="travel-path form-row">
+                    <h3>مسار السفر 1</h3>
+
+                    <!-- From Destination Select -->
+                    <div class="form-group">
+                        <label for="from-1">من:</label>
+                        <select id="from-1" name="from[]" required>
+                            <option value="" disabled selected>اختر موقع المغادرة</option>
+                            <option value="مدينة 1">مدينة 1</option>
+                            <option value="مدينة 2">مدينة 2</option>
+                            <option value="مدينة 3">مدينة 3</option>
+                            <option value="مدينة 4">مدينة 4</option>
+                        </select>
+                    </div>
+
+                    <!-- To Destination Select -->
+                    <div class="form-group">
+                        <label for="to-1">إلى:</label>
+                        <select id="to-1" name="to[]" required>
+                            <option value="" disabled selected>اختر موقع الوصول</option>
+                            <option value="مدينة A">مدينة A</option>
+                            <option value="مدينة B">مدينة B</option>
+                            <option value="مدينة C">مدينة C</option>
+                            <option value="مدينة D">مدينة D</option>
+                        </select>
+                    </div>
+
+                    <!-- Date Input -->
+                    <div class="form-group">
+                        <label for="date-1">تاريخ السفر:</label>
+                        <input type="date" id="date-1" name="date[]" required>
+                    </div>
+
+                    <!-- Time Input (24-Hour Format) -->
+                    <div class="form-group">
+                        <label for="time-1">وقت السفر (24 ساعة):</label>
+                        <input type="time" id="time-1" name="time[]" min="00:00" max="23:59" required>
+                    </div>
+
+                    <!-- Number of Passengers Input -->
+                    <div class="form-group">
+                        <label for="number-1">عدد الركاب:</label>
+                        <input type="number" id="number-1" name="number[]" placeholder="عدد الركاب" required>
+                    </div>
+                    
+                    <!-- Number of Buses Input -->
+                    <div class="form-group">
+                        <label for="bus-1">عدد الباصات:</label>
+                        <input type="number" id="bus-1" name="bus[]" placeholder="عدد الباصات" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons to Add or Delete Travel Paths -->
+            <button type="button" id="addPathBtn">إضافة مسار آخر</button>
+            <button type="button" id="deletePathBtn" style="display: none;">حذف آخر مسار</button>
+
+            <!-- Submit Button -->
+            <button type="submit">تسجيل</button>
+        </form>
+    </section>
+
+    <script>
+        // JavaScript to manage travel paths
+        let pathCount = 1;
+        const addPathBtn = document.getElementById('addPathBtn');
+        const deletePathBtn = document.getElementById('deletePathBtn');
+        const travelPathsDiv = document.getElementById('travelPaths');
+
+        // Function to add a new travel path
+        addPathBtn.addEventListener('click', function () {
+            pathCount++;
+
+            const newPathDiv = document.createElement('div');
+            newPathDiv.classList.add('travel-path', 'form-row');
+
+            newPathDiv.innerHTML = `
+                <h3>مسار السفر ${pathCount}</h3>
+
+                <!-- From Destination Select -->
+                <div class="form-group">
+                    <label for="from-${pathCount}">من:</label>
+                    <select id="from-${pathCount}" name="from[]" required>
+                        <option value="" disabled selected>اختر موقع المغادرة</option>
+                        <option value="مدينة 1">مدينة 1</option>
+                        <option value="مدينة 2">مدينة 2</option>
+                        <option value="مدينة 3">مدينة 3</option>
+                        <option value="مدينة 4">مدينة 4</option>
+                    </select>
+                </div>
+
+                <!-- To Destination Select -->
+                <div class="form-group">
+                    <label for="to-${pathCount}">إلى:</label>
+                    <select id="to-${pathCount}" name="to[]" required>
+                        <option value="" disabled selected>اختر موقع الوصول</option>
+                        <option value="مدينة A">مدينة A</option>
+                        <option value="مدينة B">مدينة B</option>
+                        <option value="مدينة C">مدينة C</option>
+                        <option value="مدينة D">مدينة D</option>
+                    </select>
+                </div>
+
+                <!-- Date Input -->
+                <div class="form-group">
+                    <label for="date-${pathCount}">تاريخ السفر:</label>
+                    <input type="date" id="date-${pathCount}" name="date[]" required>
+                </div>
+
+                <!-- Time Input (24-Hour Format) -->
+                <div class="form-group">
+                    <label for="time-${pathCount}">وقت السفر (24 ساعة):</label>
+                    <input type="time" id="time-${pathCount}" name="time[]" min="00:00" max="23:59" required>
+                </div>
+
+                <!-- Number of Passengers Input -->
+                <div class="form-group">
+                    <label for="number-${pathCount}">عدد الركاب:</label>
+                    <input type="number" id="number-${pathCount}" name="number[]" placeholder="عدد الركاب" required>
+                </div>
+                
+                <!-- Number of Buses Input -->
+                <div class="form-group">
+                    <label for="bus-${pathCount}">عدد الباصات:</label>
+                    <input type="number" id="bus-${pathCount}" name="bus[]" placeholder="عدد الباصات" required>
+                </div>
+            `;
+
+            travelPathsDiv.appendChild(newPathDiv);
+            // Show the delete button only if there are more than one path
+            if (pathCount > 1) {
+                deletePathBtn.style.display = "block"; // Show delete button
+            }
+        });
+
+        // Function to delete the last travel path
+        deletePathBtn.addEventListener('click', function () {
+            if (pathCount > 1) { // Ensure there's at least one path left
+                const lastPath = travelPathsDiv.lastChild;
+                travelPathsDiv.removeChild(lastPath);
+                pathCount--;
+
+                if (pathCount === 1) {
+                    deletePathBtn.style.display = "none"; // Hide delete button if only one path left
+                }
+            }
+        });
+    </script>
+</body>
+</html>
